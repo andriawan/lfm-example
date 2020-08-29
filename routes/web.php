@@ -24,3 +24,7 @@ Route::group(['prefix' => 'media', 'middleware' => ['web', 'auth']], function ()
 Route::group(['prefix' => 'media-sample'], function () {
     \UniSharp\LaravelFilemanager\Lfm::routes();
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
